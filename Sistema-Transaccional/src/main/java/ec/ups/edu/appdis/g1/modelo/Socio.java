@@ -74,24 +74,13 @@ public class Socio implements Serializable {
     @OneToMany(mappedBy = "socio",fetch = FetchType.EAGER)
 	private List<LoginHistoricos> loginh;
     
-//    public int getIdSocio() {
-//        return idSocio;
-//    }
-//
-//    public void setIdSocio(int idSocio) {
-//        this.idSocio = idSocio;
-//    }
-
     public Cuenta getCuenta() {
         return cuenta;
     }
 
-    public void setCuenta(Cuenta cuentaen) {
-        this.cuenta = cuentaen;
+    public void setCuenta(Cuenta cuenta) {
+        this.cuenta = cuenta;
     }
-    
-    
-    
     
     public List<LoginHistoricos> getLoginh() {
 		return loginh;
@@ -196,7 +185,5 @@ public class Socio implements Serializable {
     public void setEstadoCiviilSocio(String estadoCiviilSocio) {
         this.estadoCiviilSocio = estadoCiviilSocio;
     }
-
-   
 
 }
