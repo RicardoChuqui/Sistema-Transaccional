@@ -23,30 +23,18 @@ public class MovimientoDAO {
     @PersistenceContext
     private EntityManager em;
     
-    /*
-	 * metodo que permite crear un movimiento de la cuenta en la base de datos 
-	 */
     public void insertMovimiento(Movimiento movimiento)throws Exception{
         em.persist(movimiento);
     }
     
-    /*
-  	 * metodo que permite retornar un movimiento de la cuenta en la base de datos por medio de su id
-  	 */
     public Movimiento readMovimiento(int idMovimiento)throws Exception{
         return em.find(Movimiento.class, idMovimiento);
     }
-    
-    /*
-  	 * metodo que permite actualizar un movimiento de la cuenta en la base de datos 
-  	 */
+  
     public void updateMovimiento(Movimiento movimiento)throws Exception{
      em.merge(movimiento);
     }
     
-    /*
-  	 * metodo que permite eliminar un movimiento de la cuenta en la base de datos 
-  	 */
     public void deleteMovimiento(int idMovimiento)throws Exception{
      Movimiento m=readMovimiento(idMovimiento);
      em.remove(m);
@@ -60,10 +48,6 @@ public class MovimientoDAO {
         return q.getResultList();
     }
     
-    
-     /*
- 	 * metodo que permite listar los movimiento de la cuenta de la base de datos por medio de su id
- 	 */
      public List<Movimiento> listarMovimiento(String idCuenta){
          String jpql = "Select p FROM MovimientoEN p WHERE p.cuenta like '" + idCuenta+"'";
          Query q = em.createQuery(jpql, Movimiento.class);
@@ -71,10 +55,6 @@ public class MovimientoDAO {
           return q.getResultList();
      }
     
-    
-     /*
-  	 * metodo que permite listar los movimiento de la cuenta de la base de datos por medio de su id, fecha inicial hasta una fecha final y su tipo de cuenta
-  	 */
      public List<Movimiento> listarMovimientoFecha(String idCuenta, Date desde,Date hasta, String tipo){
     	 if(tipo.equals("Todos")) {
     		 return listarMovimiento(idCuenta);
@@ -88,12 +68,7 @@ public class MovimientoDAO {
     	 }
     	
      }
-     
-     
-     /*
-   	 * metodo que permite listar los movimiento de la cuenta de la base de datos por medio de su id, fecha inicial hasta una fecha final y su tipo de cuenta
-   	 */
-     
+    
      public List<Movimiento> movimientofechas(String idCuenta,Date fecha, Date fecha2, String tipoF){
 			System.out.println(idCuenta+fecha+fecha2+tipoF);
 			String jpql = "SELECT p FROM MovimientoEN p " + "WHERE 	p.cuenta like '" + idCuenta+"' "

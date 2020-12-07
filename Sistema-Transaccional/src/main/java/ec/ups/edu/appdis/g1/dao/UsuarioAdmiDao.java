@@ -18,16 +18,10 @@ public class UsuarioAdmiDao {
 	@PersistenceContext
 	private EntityManager em;
 
-	/*
-	 * metodo que permite crear un usuario administrador en la base de datos
-	 */
 	public void crearUsuarioAdmin(UsuarioAdministrativo admi) {
 		em.persist(admi);
 	}
 
-	/*
-	 * metodo que permite listar un usuario administrador por medio de un nombre de usuario
-	 */
 	public List<UsuarioAdministrativo> listaUAdmi(String nombre) {
 
 		String jpql = "SELECT p FROM UsuarioAdministrativo p WHERE nombre LIKE :nombre";
@@ -40,16 +34,10 @@ public class UsuarioAdmiDao {
 
 	}
 
-	/*
-	 * metodo que permite retornar usuario administrador por medio del clave primaria o id
-	 */
 	public UsuarioAdministrativo buscarUAdmin(int id) throws Exception {
 		return em.find(UsuarioAdministrativo.class, id);
 	}
 
-	/*
-	 * metodo que permite eliminar  un usuario administrador por medio de su clave primaria
-	 */
 	public void deleteUAdmi(int id) throws Exception {
 		// UsuarioAdministrativo s = em.find(UsuarioAdministrativo.class, id);
 		String jpql = "DELETE FROM UsuarioAdministrativo p WHERE p.idusuario = :id";
@@ -60,10 +48,6 @@ public class UsuarioAdmiDao {
 		System.out.println("entities deleted: " + deletedCount);
 	}
 	
-	/*
-	 * metodo que permite retornar un usuario administrador por medio de su nombre de usuario
-	 */
-
 	public UsuarioAdministrativo buscarUsuarioAdmi(String usuario) throws Exception {
 		UsuarioAdministrativo c = null;
 		try {
@@ -78,10 +62,6 @@ public class UsuarioAdmiDao {
 		}
 		return c;
 	}
-
-	/*
-	 * metodo que permite retornar un usuario administrador por medio de su nombre de usuario y su clave
-	 */
 	public UsuarioAdministrativo login(String usuario, String contrasena) throws Exception {
 		UsuarioAdministrativo p = null;
 		String jpql = "SELECT p FROM UsuarioAdministrativo p "
