@@ -28,7 +28,7 @@ import javax.persistence.Table;
 
 
 @Entity
-public class CuentaEN implements Serializable{
+public class Cuenta implements Serializable{
     
     
     
@@ -49,7 +49,7 @@ public class CuentaEN implements Serializable{
      @JoinColumn(name="cedulaSocio")
     //@JoinColumn(name="idSocio")
    //  @Column (name="CedulaFK")
-    private SocioEN socioen;
+    private Socio socio;
      
      @Column(name="saldo")
      private double saldo;
@@ -86,17 +86,19 @@ public class CuentaEN implements Serializable{
         this.fechaRegistroCuenta = fechaRegistroCuenta;
     }
 
-    public SocioEN getSocio() {
-        return socioen;
-    }
+    
 
-    public void setSocio(SocioEN socio) {
-        this.socioen = socio;
-    }
+    public Socio getSocio() {
+		return socio;
+	}
 
-    @Override
+	public void setSocio(Socio socio) {
+		this.socio = socio;
+	}
+
+	@Override
     public String toString() {
-        return "CuentaEN{" + "idCuenta=" + idCuenta + ", tipoCuenta=" + tipoCuenta + ", fechaRegistroCuenta=" + fechaRegistroCuenta + ", socioen=" + socioen + ", saldo=" + saldo + '}';
+        return "Cuenta{" + "idCuenta=" + idCuenta + ", tipoCuenta=" + tipoCuenta + ", fechaRegistroCuenta=" + fechaRegistroCuenta + ", socioen=" + socio + ", saldo=" + saldo + '}';
     }
 
   

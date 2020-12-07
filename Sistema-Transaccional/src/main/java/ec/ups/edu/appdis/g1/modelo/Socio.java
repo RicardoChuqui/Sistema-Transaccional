@@ -24,7 +24,7 @@ import javax.persistence.OneToOne;
  * @author Ricardo Chuqui
  */
 @Entity
-public class SocioEN implements Serializable {
+public class Socio implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -68,8 +68,8 @@ public class SocioEN implements Serializable {
     @Column(name = "estadoCivilSocio")
     private String estadoCiviilSocio;
 
-    @OneToOne(mappedBy = "socioen")
-    private CuentaEN cuentaen;
+    @OneToOne(mappedBy = "socio")
+    private Cuenta cuenta;
 
     @OneToMany(mappedBy = "socio",fetch = FetchType.EAGER)
 	private List<LoginHistoricos> loginh;
@@ -82,12 +82,12 @@ public class SocioEN implements Serializable {
 //        this.idSocio = idSocio;
 //    }
 
-    public CuentaEN getCuentaen() {
-        return cuentaen;
+    public Cuenta getCuenta() {
+        return cuenta;
     }
 
-    public void setCuentaen(CuentaEN cuentaen) {
-        this.cuentaen = cuentaen;
+    public void setCuenta(Cuenta cuentaen) {
+        this.cuenta = cuentaen;
     }
     
     
