@@ -1,11 +1,5 @@
 
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ec.ups.edu.appdis.g1.modelo;
 import java.io.Serializable;
 import java.util.Date;
@@ -86,17 +80,15 @@ public class Cuenta implements Serializable{
         this.fechaRegistroCuenta = fechaRegistroCuenta;
     }
 
-    
-
     public Socio getSocio() {
-		return socio;
-	}
+        return socio;
+    }
 
-	public void setSocio(Socio socio) {
-		this.socio = socio;
-	}
+    public void setSocio(Socio socio) {
+        this.socio = socio;
+    }
 
-	@Override
+    @Override
     public String toString() {
         return "Cuenta{" + "idCuenta=" + idCuenta + ", tipoCuenta=" + tipoCuenta + ", fechaRegistroCuenta=" + fechaRegistroCuenta + ", socioen=" + socio + ", saldo=" + saldo + '}';
     }

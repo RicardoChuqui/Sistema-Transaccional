@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ec.ups.edu.appdis.g1.negocio;
 
 
@@ -15,6 +11,9 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.swing.JOptionPane;
 
+import ec.ups.edu.appdis.g1.dao.CuentaDAO;
+import ec.ups.edu.appdis.g1.dao.MovimientoDAO;
+import ec.ups.edu.appdis.g1.dao.SocioDao;
 import ec.ups.edu.appdis.g1.modelo.Cuenta;
 import ec.ups.edu.appdis.g1.modelo.Movimiento;
 import ec.ups.edu.appdis.g1.modelo.Socio;
@@ -65,7 +64,7 @@ public class GestionBancariaON {
 	 * metodo readSocio de su clase socioDao
 	 */
 
-	public SocioEN buscarSocio(String cedulaSocio) throws Exception {
+	public Socio buscarSocio(String cedulaSocio) throws Exception {
 		return socioDao.readSocio(cedulaSocio);
 
 	}
@@ -90,7 +89,7 @@ public class GestionBancariaON {
 	 * metodo que permite listar a todos los socio llamando al metodo getSocios de
 	 * su clase socioDao
 	 */
-	public List<SocioEN> listarSocios() throws Exception {
+	public List<Socio> listarSocios() throws Exception {
 		return socioDao.getSocios("%");
 	}
 
