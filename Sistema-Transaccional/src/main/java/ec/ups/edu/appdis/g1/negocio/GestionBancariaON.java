@@ -39,8 +39,6 @@ public class GestionBancariaON {
 	/*
 	 * metodo que permite crear un socio llamando al metodo crearAcceso de su clase
 	 * socioDao primero verifica si el socio existe en la base de datos si existe un
-	 * socio mostrara un mensaje que el socio no se puede creae caso contrario
-	 * verificara si su cedula es correcta y se procedera a creara un nuevo socio
 	 */
 	public void guardarSocio(Socio socio) throws Exception {
 

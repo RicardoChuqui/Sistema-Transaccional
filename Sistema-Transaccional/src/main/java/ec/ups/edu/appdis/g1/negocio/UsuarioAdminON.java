@@ -32,14 +32,14 @@ public class UsuarioAdminON {
 	}
 
 	/*
-  	 * metodo que permite eliminar un usuario administrativo por medio de su clave primaria llamando al metodo delete de la clase dao
+  	 * eliminar un usuario administrativo por medio de su clave primaria llamando al metodo delete de la clase dao
   	 */
 	public void eliminarUAdmi(int id) throws Exception {
         uddao.deleteUAdmi(id);;
     }
 	
 	/*
-  	 * metodo que permite retornar un usuario administrativo por medio de su correo y clave llamando al metodo login de la clase dao
+  	 * permite retornar un usuario administrativo por medio de su correo y clave llamando al metodo login de la clase dao
   	 */
 	
 	public UsuarioAdministrativo buscarUsuarioAdmi(String usuario,String clave)throws Exception {
@@ -48,7 +48,7 @@ public class UsuarioAdminON {
 	}
 	
 	/*
-  	 * metodo que permite retornar un usuario administrativo por medio de su clave primaria llamando al metodo buscar de la clase dao
+  	 * permite retornar un usuario administrativo por medio de su clave primaria llamando al metodo buscar de la clase dao
   	 */
 	public UsuarioAdministrativo UsuarioAdmi(int id)throws Exception {
 		return uddao.buscarUAdmin(id);
@@ -56,7 +56,7 @@ public class UsuarioAdminON {
 	}	
 	
 	/*
-  	 * metodo que permite retornar un usuario administrativo por medio de su usuario llamando al metodo BuscarUsuario de la clase dao
+  	 *permite retornar un usuario administrativo por medio de su usuario llamando al metodo BuscarUsuario de la clase dao
   	 */
 	public UsuarioAdministrativo BuscarUsuario(String usuario) throws Exception{
 		return uddao.buscarUsuarioAdmi(usuario);

@@ -17,7 +17,7 @@ public class RolON {
 	private RolDao dao;
 
 	/*
-  	 * metodo que permite crear un rol  llamando al metodo crearRol de su clase dao
+  	 *  permite crear un rol  llamando al metodo crearRol de su clase dao
   	 */
 	public void crearRol(Rol rol) {
 		dao.crearRol(rol);
