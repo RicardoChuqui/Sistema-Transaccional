@@ -69,7 +69,7 @@ public class CuentaDAO {
   	 */
 	public void actualizarSaldoCuenta(String idCuenta, double cantidad) throws Exception {
 
-		String jpql = "UPDATE CuentaEN p SET p.saldo = p.saldo+" + cantidad + " WHERE idcuenta='" + idCuenta + "'";
+		String jpql = "UPDATE Cuenta p SET p.saldo = p.saldo+" + cantidad + " WHERE idcuenta='" + idCuenta + "'";
 
 		Query query = em.createQuery(jpql);
 		query.executeUpdate();
