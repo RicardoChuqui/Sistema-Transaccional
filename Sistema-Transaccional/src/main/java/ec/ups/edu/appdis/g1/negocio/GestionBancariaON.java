@@ -35,7 +35,6 @@ public class GestionBancariaON {
 	@Inject
 	private MovimientoDAO movimientoDAO;
 
-	/* Socio */
 
 	/*
 	 * metodo que permite crear un socio llamando al metodo crearAcceso de su clase
