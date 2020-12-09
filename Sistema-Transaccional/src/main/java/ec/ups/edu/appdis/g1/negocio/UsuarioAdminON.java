@@ -18,14 +18,14 @@ public class UsuarioAdminON {
 	private UsuarioAdmiDao uddao;
 	
 	/*
-  	 * metodo que permite crear un usuario administrativo 
+  	 * Para crear un usuario administrativo 
   	 */
 	public void crearUsuarioAdmi(UsuarioAdministrativo admi) {
 		uddao.crearUsuarioAdmin(admi);
 	}
 	
 	/*
-  	 * metodo que permite listar todos los usuario administrativos llamando al metodo listaUadmi de la clase dao
+  	 * Metodo para listar usuarios listaUadmi de la clase dao
   	 */
 	public List<UsuarioAdministrativo> listarUAdmi() throws Exception{
 		return uddao.listaUAdmi("%");

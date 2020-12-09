@@ -39,7 +39,7 @@ public class RolON {
 	}
 	
 	/*
-  	 * metodo que permite eliminar un rol  llamando al metodo delete de su clase dao
+  	 * Para eliminar un rol llama al metodo de la clase dao
   	 */
 	public void EliminarRol(Rol rol) {
 		dao.delete(rol);

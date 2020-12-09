@@ -24,7 +24,7 @@ public class LoginHON {
 	}
 	
 	/*
-  	 * metodo que permite listar los historico de sesion llamando al metodo getAcceso de su clase dao
+  	 * metodo que permite listar los historico de sesion llama al metodo getAcceso de su clase dao
   	 */
 	public List<LoginHistoricos> getHistoricos(String cedula){
 		return dao.getAcceso(cedula);

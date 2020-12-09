@@ -132,11 +132,11 @@ public class GestionBancariaON {
 		} catch (Exception err) {
 
 			cedulaCorrecta = false;
-			throw new Exception("Una excepcion ocurrio en el proceso de validadcion" + err);
+			throw new Exception("Proceso de validadcion" + err);
 		}
 
 		if (!cedulaCorrecta) {
-			throw new Exception("Cedula Incorrecta- !! Verifique la cedula para ingresar los contactos");
+			throw new Exception("Cedula Incorrecta! Vuelva a ingresar");
 
 		}
 
