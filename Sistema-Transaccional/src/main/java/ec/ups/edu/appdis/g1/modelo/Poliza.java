@@ -1,11 +1,34 @@
 package ec.ups.edu.appdis.g1.modelo;
 
-public class Poliza {
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Poliza implements Serializable{
+	
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+@Id
+@Column (name="tipoInversion")	
 private String tipoInversion;
+@Column(name = "monto")
 private double monto;
+@Column(name = "tiempo")
 private int timpo;
+@Column(name = "plazo")
 private int plazo;
+@ManyToOne 
+@JoinColumn(name="idCuenta")
 private Cuenta cuenta;
+
 public String getTipoInversion() {
 	return tipoInversion;
 }
