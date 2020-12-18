@@ -57,7 +57,7 @@ public class SocioDao {
 	 * metodo que permite ratornar listar los socio por medio de su cedula
 	 */
 	public List<Socio> getSocios(String filtro) throws Exception {
-		String jpql = "SELECT p FROM SocioEN p WHERE cedulaSocio LIKE :filtro";
+		String jpql = "SELECT p FROM Socio p WHERE cedulaSocio LIKE :filtro";
 
 		Query q = em.createQuery(jpql, Socio.class);
 		q.setParameter("filtro", filtro + "%");
@@ -70,7 +70,7 @@ public class SocioDao {
 	public Socio buscarCorreo(String correo)throws Exception {
 		Socio c=null;
 		try {
-			String jpql = "SELECT p FROM SocioEN p " + "WHERE p.correo LIKE :correo";
+			String jpql = "SELECT p FROM Socio p " + "WHERE p.correo LIKE :correo";
 		TypedQuery<Socio> query = em.createQuery(jpql, Socio.class);
 		query.setParameter("correo", correo);
 
