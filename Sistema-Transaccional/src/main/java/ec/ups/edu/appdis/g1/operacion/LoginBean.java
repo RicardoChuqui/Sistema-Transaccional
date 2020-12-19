@@ -146,11 +146,11 @@ public class LoginBean implements Serializable {
 
 	}
 
-//	public void saveMessage() {
-//		FacesContext context = FacesContext.getCurrentInstance();
-//
-//		context.addMessage(null, new FacesMessage("Inicio de Sesion\",\"Usuario Correcto"));
-//	}
+	public void saveMessage() {
+		FacesContext context = FacesContext.getCurrentInstance();
+
+		context.addMessage(null, new FacesMessage("Inicio de Sesion\",\"Usuario Correcto"));
+	}
 
 	public void cerrarSession() throws Exception {
 		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
@@ -158,18 +158,18 @@ public class LoginBean implements Serializable {
 	}
 
 	public void verificarSession() throws Exception {
-//		SocioEN p1 = (SocioEN) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("usuario");
-//		try {
-//			if (p1 == null) {
-//				FacesContext.getCurrentInstance().getExternalContext().redirect("permisos.xhtml");
-//			} else {
-//				
-//				
-//			}
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//		}
-//
+	Socio p1 = (Socio) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("usuario");
+	try {
+		if (p1 == null) {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("permisos.xhtml");
+			} else {
+				
+				
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
 	}
 
 	public void verificarSessionSocio() throws Exception {
