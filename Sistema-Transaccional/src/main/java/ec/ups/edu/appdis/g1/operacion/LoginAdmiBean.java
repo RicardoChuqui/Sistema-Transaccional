@@ -86,7 +86,7 @@ public class LoginAdmiBean implements Serializable {
 		UsuarioAdministrativo p1 = (UsuarioAdministrativo) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("admi");
 		try {
 			if (p1 == null) {
-				FacesContext.getCurrentInstance().getExternalContext().redirect("permisos2.xhtml");
+			//	FacesContext.getCurrentInstance().getExternalContext().redirect("permisos2.xhtml");
 			} else {
 
 			}

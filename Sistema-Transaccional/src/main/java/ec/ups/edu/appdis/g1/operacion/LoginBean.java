@@ -161,7 +161,7 @@ public class LoginBean implements Serializable {
 	Socio p1 = (Socio) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("usuario");
 	try {
 		if (p1 == null) {
-			FacesContext.getCurrentInstance().getExternalContext().redirect("permisos.xhtml");
+			//FacesContext.getCurrentInstance().getExternalContext().redirect("permisos.xhtml");
 			} else {
 				
 				
@@ -176,7 +176,7 @@ public class LoginBean implements Serializable {
 	Socio p1 = (Socio) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("usuario");
 	try {
 		if (p1 == null) {
-			FacesContext.getCurrentInstance().getExternalContext().redirect("permisos.xhtml");
+			//FacesContext.getCurrentInstance().getExternalContext().redirect("permisos.xhtml");
 		} else {
 			
 			

@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import javax.annotation.ManagedBean;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 
 import ec.ups.edu.appdis.g1.modelo.Cuenta;
