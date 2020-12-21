@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"ec.ups.edu.appdis.g1.dao"},{"l":"ec.ups.edu.appdis.g1.modelo"},{"l":"ec.ups.edu.appdis.g1.negocio"},{"l":"ec.ups.edu.appdis.g1.operacion"},{"l":"ec.ups.edu.appdis.g1.Sistema_Transaccional.test"}]

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+
+
+
+<h:head>
+	<f:metadata>
+		<f:viewParam name="cedulaSocio" value="#{socioBean.cedula}">
+		</f:viewParam>
+	</f:metadata>
+</h:head>
+
+
+
+
+<ui:composition template="template/template.xhtml">
+
+	<ui:define name="title" />
+	<h1>Poliza</h1>
+
+
+
+	<ui:define name="content">
+
+
+		<h:form class="form-horizontal form-material">
+			<div class="form-group">
+				<label class="col-md-12">Tipo Inversion</label>
+				<div class="col-md-12">
+					<h:inputText class="form-control" value="#{socioBean.newSocio.cedulaSocio}"
+						maxlength="10"
+						onkeypress="if(event.which &lt; 48 || event.which &gt; 57 ) if(event.which != 8) return false;" />
+				</div>
+
+
+			</div>
+			<div class="form-group">
+				<label class="col-md-12">Monto</label>
+				<div class="col-md-12">
+					<h:inputText class="form-control" value="#{socioBean.newSocio.nombresSocio}" />
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-md-12">Tiempo</label>
+				<div class="col-md-12">
+					<h:inputText class="form-control" value="#{socioBean.newSocio.apelidosSocio}" />
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-md-12">Plazo</label>
+				<div class="col-md-12">
+					<h:inputText class="form-control" value="#{socioBean.newSocio.edadSocio}"
+						onkeypress="if(event.which &lt; 48 || event.which &gt; 57 ) if(event.which != 8) return false;" />
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-12">
+
+					<h:commandButton action="#{polizaBean.guardarDatosPoliza()}"
+						value="Guardar" class="btn btn-success"
+						onclick="alert('Poliza Guardado');" />
+					<br /> <br />
+					<h:commandButton action="#{polizaBean.redirigeVerPoliza()}"
+						value="Ver Socios" class="btn btn-twitter" />
+					<br /> <br />
+					<h:commandButton value="Cerrar Sesion" title="Cerrar Sesion"
+						icon="ui-icon-power"
+						actionListener="#{loginAdmiBean.cerrarSession()}"
+						action="principal.xhtml" class="btn btn-youtube">
+					</h:commandButton>
+				</div>
+			</div>
+
+
+
+		</h:form>
+
+
+
+	</ui:define>
+
+
+</ui:composition>
+
+
+<h:body>
+	<h1>Ingreso de Poliza</h1>
+
+
+</h:body>
+
+
+<h:form>  
+
+           Tipo Inversion:<h:inputText
+		value="#{polizaBean.newPoliza.tipoInversion}" />
+	<br />
+            Monto: <h:inputText
+		value="#{polizaBean.newPoliza.monto}" />
+	<br />
+            Tiempo: <h:inputText
+		value="#{polizaBean.newPoliza.tiempo}" />
+	<br />
+            Plazo: <h:inputText value="#{polizaBean.newpoliza.plazo}" />
+
+	<br />
+	<br />
+
+	<h:commandButton action="#{polizaBean.guardarDatosPoliza()}"
+		value="Guardar" onclick="alert('Poliza Guardado');" />
+	<!-- <input type="reset" value="Limpiar" />-->
+
+
+	<h:commandButton action="#{polizaBean.redirigeVerPoliza()}"
+		value="Ver Socios" />
+
+
+	<br />
+
+	<br />
+	<br />
+	<h:commandButton value="Cerrar Sesion" title="Cerrar Sesion"
+		icon="ui-icon-power" actionListener="#{loginAdmiBean.cerrarSession()}"
+		action="principal.xhtml" class="btn btn-youtube">
+	</h:commandButton>
+</h:form>
+
+
+
+
+
+
+
+</html>
